@@ -1,6 +1,7 @@
 const calculator = require("./calculator");
 
-describe("A calculator object that contains functions for the basic operations: add, subtract, divide, and multiply. Each of these functions should take two numbers and return the correct calculation.", () => {
+describe("A calculator object that contains functions for the basic operations: add, subtract, divide, and multiply. \
+Each of these functions should take two numbers and return the correct calculation.", () => {
   test("Works with addition", () => {
     expect(calculator.add(2, 8)).toBe(10);
   })
