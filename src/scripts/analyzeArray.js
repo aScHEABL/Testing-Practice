@@ -1,7 +1,5 @@
 function analyzeArray(array) {
-    const averageValue = array.reduce((accumulator, currentValue) => {
-        return accumulator + currentValue;
-    })
+    const averageValue = array.reduce((a, c) => a + c) / array.length;
 
     const sortedArray = array.sort((a, b) => a - b)
     // const minValue = sortedArray[0];
@@ -18,5 +16,5 @@ function analyzeArray(array) {
     }
 }
 
-console.log(analyzeArray([1,8,3,4,2,6]));
+// console.log(analyzeArray([1,8,3,4,2,6]));
 module.exports = analyzeArray;
