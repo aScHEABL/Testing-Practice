@@ -14,11 +14,11 @@ function caesarCipher(string, shift) {
             // console.log(`Shift: ${charCode} + ${shift}`);
             if (upperOrLower === "upperCase") {
                 if (charCode + shift > 90 || charCode < 65) {
-                    encriptedString += String.fromCharCode((charCode + shift + 65) % 26 + 65);
-                } else encryptedString += String.fromCharCode(charCode + shift);
+                    encriptedString += String.fromCharCode(((charCode + shift) % 90) % 26 + 64);
+                } else encriptedString += String.fromCharCode(charCode + shift);
             } else if (upperOrLower === "lowerCase") {
                 if (charCode + shift > 122 || charCode + shift < 97) {
-                    encriptedString += String.fromCharCode((charCode + shift + 97) % 26 + 97);
+                    encriptedString += String.fromCharCode(((charCode + shift) % 122) % 26 + 96);
                 } else encriptedString += String.fromCharCode(charCode + shift);
             }
         }
@@ -26,6 +26,6 @@ function caesarCipher(string, shift) {
     return encriptedString;
 }
 
-console.log(caesarCipher("changing", 7));
+// console.log(caesarCipher("by changing the order", 7));
 
 module.exports = caesarCipher;
